@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  SubscribeToEventData:
+    image: localhost:5000/git-event-pub-sub:1.0
+    deploy:
+      replicas: 1
+    restart: always
+    command: java -cp git-event-pub-sub.jar services.SubscribeEventData
+    configs:
+    - source: subscribe_to_event_data_config
+      target: /app/conf/service.SubscribeEventData.conf
+  IngestEventData:
+    image: localhost:5000/git-event-pub-sub:1.0
+    deploy:
+      replicas: 1
+    restart: always
+    command: java -cp git-event-pub-sub.jar services.IngestEventData
+    configs:
+    - source: ingest_event_data_config
+      target: /app/conf/service.IngestEventData.conf
+configs:
+  subscribe_to_event_data_config:
+    file: ./conf/service.SubscribeEventData.conf
+  ingest_event_data_config:
+    file: ./conf/service.IngestEventData.conf
