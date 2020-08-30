@@ -3,7 +3,7 @@
 ### Steps for depoying the architecture
 
 <p>
-**Step 1**
+<b>Step 1</b>
 
 Build the Docker image using dockerfile from the jar file 
 
@@ -12,7 +12,7 @@ Build the Docker image using dockerfile from the jar file
 </p>
 
 <p>
-**Step 2**
+<b>Step 2</b>
 
 Push the docker image on local docker registry
 
@@ -21,7 +21,7 @@ Push the docker image on local docker registry
 </p>
 
 <p>
-**Step 3**
+<b>Step 3</b>
 
 Run the following command to run the application services 
  
