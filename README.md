@@ -1,4 +1,4 @@
-#Event PubSub with Kafka 
+# Event PubSub with Kafka
 
 ### Steps for depoying the architecture
 
