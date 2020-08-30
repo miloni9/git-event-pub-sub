@@ -26,9 +26,9 @@ public class IngestEventDataTest {
 
         return new Gson().fromJson(string, Event.class);
     }
-
+/*
     private KafkaProducer<String, Event> kafkaProducer() {
         return new KafkaProducer<String, Event>(KafkaConfig.getProducerProperties(Constants.SERVERS), new JsonSerializer<String>(), new JsonSerializer<Event>());
 
-    }
+    }*/
 }

@@ -1,18 +1,60 @@
 # Event PubSub with Kafka
 
+
+
 Following are major functionality of the project:
  * Get the top 50 Git Events from  https://api.github.com/events
  * Publish the data to kafka topic
  * Acquire the data from kafka and pass it ahead to apply filters  
-
+ * Added configuration management for the ease of updating the project configurations 
+  
 Tools & technologies:
    * Core Java
    * Apache Kafka
    * Docker
 
-List of Services:
+List of service files required to deploy kafka on Linux server:
+ * kafka.service
+ * zookeeper.service 
+
+List of Project Services:
  * IngestEventData
  * SubscribeEventData
+
+### Steps for deploying Kafka cluster
+____
+
+<b>Setup Zookeeper</b> 
+ 
+Enable zookeeper Service
+``` 
+systemctl enable zookeeper.service
+```
+Start the zookeeper service 
+``` 
+systemctl start zookeeper.service
+```
+
+Stop the zookeeper service 
+``` 
+systemctl stop zookeeper.service
+```
+
+<b>Setup kafka</b>
+
+Enable Kafka Service
+``` 
+systemctl enable kafka.service
+```
+Start the kafka service 
+``` 
+systemctl start kafka.service
+```
+
+Stop the kafka service 
+``` 
+systemctl stop kafka.service
+```
 
 ### Steps for deploying The project
 ________

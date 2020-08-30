@@ -2,9 +2,6 @@ package configuration;
 
 public interface Constants {
 
-    String SERVERS = "192.168.152.128:9092";
-
-
     String MASTER_CONFIGURATION_FOLDER = "conf/";
     String PROPERTY_FILE_POSTFIX = ".conf";
     String MASTER_PROPERTY = MASTER_CONFIGURATION_FOLDER + "config-master" + PROPERTY_FILE_POSTFIX;
